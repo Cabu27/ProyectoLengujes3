@@ -1,0 +1,21 @@
+{% block content %}<!-- Inicio del bloque  //-->
+
+<strong><link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"></strong><!--Formato  //-->
+<br><h1>TABLA</h1><br><!-- Mensaje  //-->
+
+<br><h1>.....Tipo......................Nombre......................Valor.....</h1><br><!-- Mensaje  //-->
+<p>________________________________________________________________________________________________________</p><!-- Mensaje  //-->
+
+
+
+
+<ul>
+{% for n in lista_para_imprimir %}<!--Ciclo para mostrar los ingredientes  //-->
+<p>{{n}}</p><!-- Se imprimen en el html los restaurantes  //-->
+{% endfor %} <!-- Fin del ciclo //-->
+</ul>
+
+<li><a href="{{url_for('index')}}">Menu</a></li><!-- Volver al menu  //-->
+
+
+{% endblock %} <!-- Fin del bloque  //-->
